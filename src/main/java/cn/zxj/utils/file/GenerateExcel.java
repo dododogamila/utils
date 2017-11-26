@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class generateExcel {
+public class GenerateExcel {
 
     public void genExcel(){
         HSSFWorkbook wb = new HSSFWorkbook();
