@@ -4,15 +4,31 @@ import cn.zxj.utils.propertiy.PropertyUtil;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.net.URLEncoder;
 
 public class DownloadFile {
+//    前端调用方式
+//    get
+//    function (fileName) {
+//        var url = "...downloadExport?fileName="+fileName;
+//        window.location.href = url;
+//    };
+//    post
+//      var url = "...downloadExport?fileName="+fileName;
+//     var form = $("<form id='getExcel'></form>").attr("method","post").attr("action",url + params)
+//    $("body").append(form);
+//    $("#getExcel").submit();
+//    form.remove();
     public void downloadExcel(String name,HttpServletResponse response){
         response.setCharacterEncoding("utf-8");
-        response.setContentType("multipart/form-data");
+//        设置文件类型，如果后缀有文件类型可以不设置，浏览器会自己识别
+//        response.setContentType("multipart/form-data");
+//        response.setContentType("application/vnd.ms-excel");
         InputStream inputStream = null;
         OutputStream os = null;
         try{
-            response.setHeader("Content-Disposition", "attachment;fileName=" + name);
+            //开发文件对话框
+            response.setHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(name, "UTF-8"));//对文件名编码，针对中文
             inputStream = new FileInputStream(new File(PropertyUtil.ShareInstance().getProperty("downlaodPath")+name));
             os = response.getOutputStream();
             byte[] b = new byte[2048];
