@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd0f524d-2d05-4c90-96c7-690bc0dfa8d2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_jchardet_jchardet_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/zxj/utils/PropertiesUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/zxj/utils/RegUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/zxj/utils/class_util/ClassUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/ExcelUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/FileImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/FilePathUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/FileTypeImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/FileUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/zxj/utils/sys/SysUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/zxj/utils/vaild/valid.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils.iml" afterPath="$PROJECT_DIR$/utils.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/DownloadFile.java" afterPath="$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/DownloadFile.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,22 +16,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ClassUtil.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/zxj/utils/class_util/ClassUtil.java">
+      <file leaf-file-name="ExcelUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/ExcelUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="377" column="29" lean-forward="false" selection-start-line="377" selection-start-column="29" selection-end-line="377" selection-end-column="29" />
+            <state relative-caret-position="1335">
+              <caret line="300" column="43" lean-forward="false" selection-start-line="300" selection-start-column="43" selection-end-line="300" selection-end-column="43" />
               <folding>
-                <element signature="e#1225#1233#0" expanded="true" />
-                <element signature="e#1981#1989#0" expanded="true" />
-                <element signature="e#2889#2897#0" expanded="true" />
-                <element signature="e#3558#3566#0" expanded="true" />
-                <element signature="e#4452#4460#0" expanded="true" />
-                <element signature="e#5302#5310#0" expanded="true" />
-                <element signature="e#5964#5972#0" expanded="true" />
-                <element signature="e#6794#6802#0" expanded="true" />
-                <element signature="e#7835#7843#0" expanded="true" />
-                <element signature="e#8340#8348#0" expanded="true" />
+                <element signature="method#readToList#0;class#ExcelUtil#0" expanded="false" />
+                <element signature="method#readToList#1;class#ExcelUtil#0" expanded="false" />
+                <element signature="method#loadWorkbook#0;class#ExcelUtil#0" expanded="false" />
+                <element signature="method#loadWorkbook#1;class#ExcelUtil#0" expanded="false" />
+                <element signature="method#writeToExcel#0;class#ExcelUtil#0" expanded="false" />
+                <element signature="method#listToWorkbook#0;class#ExcelUtil#0" expanded="false" />
+                <element signature="method#listToWorkbook#1;class#ExcelUtil#0" expanded="false" />
+                <element signature="method#output#0;class#ExcelUtil#0" expanded="false" />
+                <element signature="method#main#0;class#ExcelUtil#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GenerateExcel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/GenerateExcel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="23" />
+              <folding>
+                <element signature="method#writeFile#0;class#GenerateExcel#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DownloadFile.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/DownloadFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="132" column="33" lean-forward="true" selection-start-line="131" selection-start-column="9" selection-end-line="132" selection-end-column="33" />
+              <folding>
+                <element signature="e#2221#2229#0" expanded="true" />
+                <element signature="method#createWorkBook#0;class#DownloadFile#0" expanded="false" />
+                <element signature="method#createBook#0;class#DownloadFile#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -80,7 +92,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/properties/config.properties" />
         <option value="$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/generateExcel.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/zxj/utils/propertiy/PropertyUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/DownloadFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/zxj/utils/http/HttpConfigConstant.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/zxj/utils/http/HttpClientResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/zxj/utils/http/HttpClientUtil.java" />
@@ -95,7 +106,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/zxj/utils/imgCompress/test.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/zxj/utils/imgCompress/ImageCompressUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/zxj/utils/zhengze/常用正则" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/ExcelUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/zxj/utils/class_util/FileUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/zxj/utils/vaild/valid.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/zxj/utils/PropertiesUtil.java" />
@@ -106,6 +116,8 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/FileUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/FilePathUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/zxj/utils/class_util/ClassUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/ExcelUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/DownloadFile.java" />
       </list>
     </option>
   </component>
@@ -146,7 +158,9 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,7 +201,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="class_util" type="462c0819:PsiDirectoryNode" />
+              <item name="file" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="utils" type="b2602c69:ProjectViewProjectNode" />
@@ -197,8 +211,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -368,12 +380,13 @@
       <workItem from="1514076579967" duration="99000" />
       <workItem from="1514077129457" duration="35000" />
       <workItem from="1514366372194" duration="116000" />
-      <workItem from="1515997469173" duration="4398000" />
+      <workItem from="1515997469173" duration="5008000" />
+      <workItem from="1520730664585" duration="1420000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19405000" />
+    <option name="totallyTimeSpent" value="21435000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -389,12 +402,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42930153" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49574107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49488056" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2602118" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26399395" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36348122" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -406,6 +418,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36348122" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -643,23 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
           <caret line="65" column="168" lean-forward="false" selection-start-line="65" selection-start-column="168" selection-end-line="65" selection-end-column="168" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/DownloadFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/GenerateExcel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1776">
-          <caret line="45" column="14" lean-forward="true" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -667,17 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
           <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/ExcelUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="359" column="34" lean-forward="false" selection-start-line="359" selection-start-column="34" selection-end-line="359" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -685,7 +670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -693,7 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1749">
           <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -701,9 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3402">
           <caret line="126" column="17" lean-forward="false" selection-start-line="126" selection-start-column="17" selection-end-line="126" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -719,9 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="134" column="35" lean-forward="false" selection-start-line="134" selection-start-column="35" selection-end-line="134" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -729,7 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -737,7 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5259">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -745,10 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="687" column="31" lean-forward="false" selection-start-line="687" selection-start-column="31" selection-end-line="687" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#16321#16327#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -756,25 +727,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-75">
           <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/zxj/utils/class_util/ClassUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
+        <state relative-caret-position="9855">
           <caret line="377" column="29" lean-forward="false" selection-start-line="377" selection-start-column="29" selection-end-line="377" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/ExcelUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1335">
+          <caret line="300" column="43" lean-forward="false" selection-start-line="300" selection-start-column="43" selection-end-line="300" selection-end-column="43" />
           <folding>
-            <element signature="e#1225#1233#0" expanded="true" />
-            <element signature="e#1981#1989#0" expanded="true" />
-            <element signature="e#2889#2897#0" expanded="true" />
-            <element signature="e#3558#3566#0" expanded="true" />
-            <element signature="e#4452#4460#0" expanded="true" />
-            <element signature="e#5302#5310#0" expanded="true" />
-            <element signature="e#5964#5972#0" expanded="true" />
-            <element signature="e#6794#6802#0" expanded="true" />
-            <element signature="e#7835#7843#0" expanded="true" />
-            <element signature="e#8340#8348#0" expanded="true" />
+            <element signature="method#readToList#0;class#ExcelUtil#0" expanded="false" />
+            <element signature="method#readToList#1;class#ExcelUtil#0" expanded="false" />
+            <element signature="method#loadWorkbook#0;class#ExcelUtil#0" expanded="false" />
+            <element signature="method#loadWorkbook#1;class#ExcelUtil#0" expanded="false" />
+            <element signature="method#writeToExcel#0;class#ExcelUtil#0" expanded="false" />
+            <element signature="method#listToWorkbook#0;class#ExcelUtil#0" expanded="false" />
+            <element signature="method#listToWorkbook#1;class#ExcelUtil#0" expanded="false" />
+            <element signature="method#output#0;class#ExcelUtil#0" expanded="false" />
+            <element signature="method#main#0;class#ExcelUtil#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/GenerateExcel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="23" />
+          <folding>
+            <element signature="method#writeFile#0;class#GenerateExcel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/zxj/utils/file/DownloadFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="132" column="33" lean-forward="true" selection-start-line="131" selection-start-column="9" selection-end-line="132" selection-end-column="33" />
+          <folding>
+            <element signature="e#2221#2229#0" expanded="true" />
+            <element signature="method#createWorkBook#0;class#DownloadFile#0" expanded="false" />
+            <element signature="method#createBook#0;class#DownloadFile#0" expanded="false" />
           </folding>
         </state>
       </provider>
