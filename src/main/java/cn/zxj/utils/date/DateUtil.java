@@ -20,7 +20,7 @@ public class DateUtil {
     /**
      * 年月日格式.
      */
-    public final static String YYYY_MM_DD_PATTERN2 = "yyyy/MM/dd HH";
+    public final static String YYYY_MM_DD_PATTERN2 = "yyyy/MM/dd";
     /**
      * xxxx年xx月xx日 格式
      */
