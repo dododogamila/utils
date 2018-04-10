@@ -15,7 +15,7 @@ public class DateUtil {
     /**
      * 年月日格式.
      */
-    public final static String YYYY_MM_DD_PATTERN = "yyyy-MM-dd HH:mm";
+    public final static String YYYY_MM_DD_PATTERN = "yyyy-MM-dd HH:mm:ss";
 
     /**
      * 年月日格式.
