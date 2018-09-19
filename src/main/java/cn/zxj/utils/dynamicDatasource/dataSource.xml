@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 动态数据源 -->
+    <bean id="datasource" class="cn.demo.dynamicDatasource.DynamicDataSource">
+        <property name="targetDataSources">
+            <map key-type="java.lang.String">
+                <entry key="master" value-ref="masterDatasource" />
+                <entry key="slave1" value-ref="slaveDataSource1" />
+                <entry key="slave2" value-ref="slaveDataSource2" />
+                <entry key="slave3" value-ref="slaveDataSource3" />
+            </map>
+        </property>
+        <property name="defaultTargetDataSource" ref="masterDatasource" />
+    </bean>
+
+    <!-- 切换数据源的切面-->
+    <bean id="dynamicDatasourceProcessor" class="cn.demo.dynamicDatasource.DynamicDataSourceProcessor" />
+    <aop:config proxy-target-class="true">
+        <aop:pointcut id="txPointcut"
+                      expression="(execution(* cn.xdf.ucan.goodhope.dao.*.*(..)))" />
+        <aop:advisor pointcut-ref="txPointcut" advice-ref="transactionAdvice" />
+        <aop:aspect order="100" ref="dynamicDatasourceProcessor">
+            <aop:around pointcut-ref="txPointcut" method="determineDataSource" />
+        </aop:aspect>
+    </aop:config>
+</beans>
