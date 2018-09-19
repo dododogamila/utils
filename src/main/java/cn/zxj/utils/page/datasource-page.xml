@@ -1,0 +1,32 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans">-->
+
+    <!--&lt;!&ndash; 创建SqlSessionFactory，同时指定数据源&ndash;&gt;-->
+    <!--<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+        <!--<property name="dataSource" ref="datasource" />-->
+        <!--<property name="mapperLocations">-->
+            <!--<array>-->
+                <!--<value>classpath*:cn/xxxxx/*.xml</value>-->
+                <!--<value>classpath*:cn/xxxxxxx/*.xml</value>-->
+            <!--</array>-->
+        <!--</property>-->
+        <!--<property name="plugins">-->
+            <!--<array>-->
+                <!--&lt;!&ndash; 分页 &ndash;&gt;-->
+                <!--<bean class="com.github.pagehelper.PageHelper">-->
+                    <!--<property name="properties">-->
+                        <!--&lt;!&ndash; 4.0.0以后版本可以不设置该参数 &ndash;&gt;-->
+                        <!--<props>-->
+                            <!--<prop key="dialect">mysql</prop>-->
+                            <!--&lt;!&ndash; 3.3.0版本可用 - 分页参数合理化，默认false禁用 &ndash;&gt;-->
+                            <!--&lt;!&ndash; 启用合理化时，如果pageNum<1会查询第一页，如果pageNum>pages会查询最后一页 &ndash;&gt;-->
+                            <!--&lt;!&ndash; 禁用合理化时，如果pageNum<1或pageNum>pages会返回空数据 &ndash;&gt;-->
+                            <!--<prop key="reasonable">true</prop>-->
+                        <!--</props>-->
+                    <!--</property>-->
+                <!--</bean>-->
+            <!--</array>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+<!--</beans>-->
