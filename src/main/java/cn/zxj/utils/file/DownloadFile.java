@@ -25,6 +25,38 @@ public class DownloadFile {
 //    $("body").append(form);
 //    $("#getExcel").submit();
 //    form.remove();
+
+//    var url = ENV.BASEURL + "web/argclassinfo/downloadClassInfo";
+//
+//    var data = {
+//            "schoolid": $scope.schoolId,
+//            "year": $scope.year,
+//            "season": $scope.season,
+//            "gradetypeid": $scope.gradetype,
+//            "morning1": $scope.timeInput[0] + '-' + $scope.timeInput[1],
+//            "morning2": $scope.timeInput[2] + '-' + $scope.timeInput[3],
+//            "afternoon1": $scope.timeInput[4] + '-' + $scope.timeInput[5],
+//            "afternoon2": $scope.timeInput[6] + '-' + $scope.timeInput[7],
+//            "night": $scope.timeInput[8] + '-' + $scope.timeInput[9]
+//
+//};
+//
+//    $http({
+//            url: url,
+//            method: 'POST',
+//            data: data,
+//            responseType: 'arraybuffer'
+//            }).success(function (data) {
+//            var blob = new Blob([data], {type: "application/vnd.ms-excel"});
+//            var objectUrl = URL.createObjectURL(blob);
+//            var aForExcel = $("<a><span class='forExcel'>下载excel</span></a>").attr("href", objectUrl);
+//            $("body").append(aForExcel);
+//            $(".forExcel").click();
+//            aForExcel.remove();
+//            }).error(function () {
+//            alert("error");
+//            })
+
     public void downloadExcel(String name,HttpServletResponse response){
         response.setCharacterEncoding("utf-8");
 //        设置文件类型，如果后缀有文件类型可以不设置，浏览器会自己识别
