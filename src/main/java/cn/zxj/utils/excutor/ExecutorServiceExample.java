@@ -8,19 +8,37 @@ public class ExecutorServiceExample {
     public Integer demo1(){
         List<Object> list = new ArrayList<Object>();
         List<Future<Integer>> resultList = new ArrayList<Future<Integer>>();
+
+        CountDownLatch countDownLatch = new CountDownLatch(list.size());
+        ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() * 2);
+
         try {
-            CountDownLatch countDownLatch = new CountDownLatch(list.size());
-            ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() * 100);
             for (Object o:list) {
                 ExecutorDemo executorDemo = new ExecutorDemo(o,countDownLatch);
                 Future<Integer> future = executorService.submit(executorDemo);
                 resultList.add(future);
             }
             countDownLatch.await();
+            executorService.shutdown();
         } catch (InterruptedException e) {
             e.printStackTrace();
+            executorService.shutdownNow();
+        }finally {
+            if (executorService!=null){
+                executorService.shutdownNow();
+            }
         }
-        return resultList.size();
+
+        for (Future<Integer> integerFuture : resultList) {
+            try {
+                Integer result = integerFuture.get();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
     }
     class ExecutorDemo implements Callable<Integer> {
         private Object o;
