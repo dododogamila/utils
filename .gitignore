@@ -23,6 +23,7 @@
 .idea/**/gradle.xml
 .idea/**/libraries
 
+<<<<<<< HEAD
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
 # since they will be recreated, and may cause churn.  Uncomment if using
@@ -33,6 +34,11 @@
 
 # CMake
 cmake-build-*/
+=======
+# CMake
+cmake-build-debug/
+cmake-build-release/
+>>>>>>> origin/master
 
 # Mongo Explorer plugin
 .idea/**/mongoSettings.xml
@@ -62,7 +68,10 @@ fabric.properties
 .idea/httpRequests
 
 /target/
+<<<<<<< HEAD
 .idea/inspectionProfiles/
 .idea/libraries/Maven__org_aspectj_aspectjweaver_1_7_4.xml
 .idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml
 src/main/java/cn/zxj/utils/quartz/
+=======
+>>>>>>> origin/master
