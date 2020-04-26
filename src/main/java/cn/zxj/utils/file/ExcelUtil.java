@@ -2,11 +2,12 @@ package cn.zxj.utils.file;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.time.DateFormatUtils;
-import org.apache.poi.hssf.usermodel.HSSFDateUtil;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.util.CellRangeAddress;
+import org.apache.poi.ss.util.RegionUtil;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -294,9 +295,44 @@ public class ExcelUtil {
 		}finally{
 			IOUtils.closeQuietly(fo);
 		}
-	}  
-    
-    
+	}
+    public static HSSFCellStyle setSheetStyle( HSSFWorkbook wb, HSSFSheet sheet){
+        sheet.setDefaultColumnWidth(20);
+
+        HSSFFont font = wb.createFont();
+        font.setFontHeightInPoints((short) 12);
+        font.setFontName("宋体");
+
+        HSSFCellStyle style = wb.createCellStyle();
+        style.setFont(font);
+        style.setAlignment(HSSFCellStyle.ALIGN_CENTER);
+
+        style.setBorderBottom(HSSFCellStyle.BORDER_THIN);
+        style.setBorderLeft(HSSFCellStyle.BORDER_THIN);
+        style.setBorderRight(HSSFCellStyle.BORDER_THIN);
+        style.setBorderTop(HSSFCellStyle.BORDER_THIN);
+
+        return style;
+    }
+
+    public static HSSFCellStyle setBackgroundSheetStyle(HSSFWorkbook wb, HSSFSheet sheet, Short bg){
+
+        HSSFCellStyle style = setSheetStyle( wb, sheet);
+        if (bg != null){
+            style .setFillPattern(HSSFCellStyle.FINE_DOTS);
+            style.setFillForegroundColor(HSSFColor.BLACK.index);
+            style.setFillBackgroundColor(bg);
+        }
+        return style;
+    }
+
+    //合并单元格边框消失问题
+    public void setBorderStyle(int border, CellRangeAddress region, HSSFSheet sheet, HSSFWorkbook wb){
+        RegionUtil.setBorderBottom(border, region, sheet, wb);
+        RegionUtil.setBorderLeft(border, region, sheet, wb);
+        RegionUtil.setBorderRight(border, region, sheet, wb);
+        RegionUtil.setBorderTop(border, region, sheet, wb);
+    }
       
     public static void main(String[] args) {  
         List<Object> rows = new ArrayList<Object>();  
