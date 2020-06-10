@@ -68,7 +68,5 @@ fabric.properties
 .idea/inspectionProfiles/
 .idea/libraries/Maven__org_aspectj_aspectjweaver_1_7_4.xml
 .idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml
-src/main/java/cn/zxj/utils/quartz/
 /.idea/
 /utils.iml
-!/src/main/java/cn/zxj/utils/quartz/
