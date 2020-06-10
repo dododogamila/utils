@@ -1,0 +1,4 @@
+
+logging:
+  config: classpath:logback-test.xml
+  level: debug
