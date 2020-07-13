@@ -1,5 +1,6 @@
 package cn.zxj.utils.http;
 
+import com.alibaba.fastjson.JSON;
 import org.apache.http.HttpEntityEnclosingRequest;
 import org.apache.http.HttpRequest;
 import org.apache.http.NameValuePair;
@@ -12,6 +13,8 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.config.SocketConfig;
+import org.apache.http.entity.ContentType;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
@@ -31,6 +34,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static org.apache.http.HttpHeaders.USER_AGENT;
 
 /**
  * http服务类
@@ -62,6 +67,7 @@ public class HttpClientUtil {
 
 
         HttpRequestRetryHandler retryHandler = new HttpRequestRetryHandler() {
+            @Override
             public boolean retryRequest(
                     IOException exception,
                     int executionCount,
@@ -119,12 +125,10 @@ public class HttpClientUtil {
      * 发送http请求
      *
      * @param url           http + domain + pathURI(一定要加上http协议名称)
-     * @param httpMethod    请求类型，为空的话默认为get
      * @param requestParams 请求的参数
      * @return
      */
-    public static HttpClientResult doRequest(String url, HttpMethod httpMethod,
-                                             Map<String, String> requestParams) {
+    public static HttpClientResult doPost(String url, Map<String, String> requestParams) {
         HttpClientResult result = new HttpClientResult();
         // 2. 构建request请求中的参数
         List<NameValuePair> params = new ArrayList<NameValuePair>();
@@ -137,48 +141,53 @@ public class HttpClientUtil {
         CloseableHttpResponse httpResponse = null;
         // 3. 根据请求的不同类型来进行http请求
         try {
-            if (httpMethod == HttpMethod.POST) {
-                HttpPost httpPost = new HttpPost(url);
-
-                httpPost.setEntity(new UrlEncodedFormEntity(params,"UTF-8"));
-                httpResponse = HTTPCLIENT.execute(httpPost);
-                String content = EntityUtils.toString(httpResponse.getEntity());
-                result.setSuccess(true);
-                result.setData(content);
-            } else {
-                HttpGet httpGet = new HttpGet(url);
-                String str = EntityUtils.toString(new UrlEncodedFormEntity(params));
-                if (Strings.isNullOrEmpty(str)) {
-                    httpGet.setURI(new URI(httpGet.getURI().toString()));
-                } else {
-                    httpGet.setURI(new URI(httpGet.getURI().toString() + "?" + str));
-                }
-                httpResponse = HTTPCLIENT.execute(httpGet);
-                String content = EntityUtils.toString(httpResponse.getEntity());
-                result.setSuccess(true);
-                result.setData(content);
-            }
+            HttpPost httpPost = new HttpPost(url);
+            httpPost.setHeader(USER_AGENT,"Mozilla/5.0");
+            httpPost.setEntity(new UrlEncodedFormEntity(params,"UTF-8"));
+            httpResponse = HTTPCLIENT.execute(httpPost);
+            String content = EntityUtils.toString(httpResponse.getEntity());
+            result.setSuccess(true);
+            result.setData(content);
         } catch (Exception e) {
-            LOGGER.error("http请求出错了:URL=" + url + " , httpMethod=", httpMethod,
+            LOGGER.error("http请求出错了:URL=" + url + " , httpMethod=",
                     " ,requestParams=" + requestParams+"error = "+e.getMessage());
             result.setSuccess(false);
         }
 
         return result;
     }
+    /**
+     * 发送http请求
+     *
+     * @param url           http + domain + pathURI(一定要加上http协议名称)
+     * @param params 请求的参数
+     * @return
+     */
+    public static HttpClientResult doJsonPost(String url,Object params,Map<String,String> headers) {
+        HttpClientResult result = new HttpClientResult();
+        CloseableHttpResponse httpResponse = null;
+        // 3. 根据请求的不同类型来进行http请求
+        try {
+            HttpPost httpPost = new HttpPost(url);
+            httpPost.setHeader(USER_AGENT,"Mozilla/5.0");
+            if (null != headers && !headers.isEmpty()) {
+                for (Map.Entry<String, String> entry : headers.entrySet()) {
+                    httpPost.setHeader(entry.getKey(), entry.getValue());
+                }
+            }
 
-    public static void main(String[] args){
-//        Map<String, String> requestParams = new HashMap<String, String>();
-//
-//        requestParams.put("schoolid","qwe");
-//        requestParams.put("classcode","asdf");
-//        HttpClientResult result = HttpClientUtil.doRequest("http://....", HttpMethod.GET, requestParams);
+            StringEntity entity = new StringEntity(JSON.toJSONString(params), ContentType.create("application/json", "utf-8"));
+            httpPost.setEntity(entity);
+            httpResponse = HTTPCLIENT.execute(httpPost);
+            String content = EntityUtils.toString(httpResponse.getEntity());
+            result.setSuccess(true);
+            result.setData(content);
+        } catch (Exception e) {
+            LOGGER.error("http请求出错了:URL=" + url+" ,requestParams=" +JSON.toJSONString(params),e.getMessage());
+            result.setSuccess(false);
+        }
 
-//        Map<String, String> requestParams = new HashMap<String, String>();
-//        requestParams.put("id","qwer");
-//        HttpClientResult result = HttpClientUtil.doGet("http:///...", requestParams);
-
-
+        return result;
     }
 }
 
