@@ -1,0 +1,3 @@
+providerTraceFilter=com.etekcity.it.filter.ProviderTraceFilter
+consumerTraceFilter=com.etekcity.it.filter.ConsumerTraceFilter
+dubboExceptionFilter=com.etekcity.it.filter.DubboExceptionFilter
